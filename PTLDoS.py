@@ -76,12 +76,12 @@ def send (site, proxy):
 			continue
 
 def main ():
-print("""
+    print("""
 <python 3>
     print(Fore.BLUE + ""Лабаратория 'ProgTeam' приветствует."")
         </python 3>
 """)
-print(Fore.GREEN + """
+    print(Fore.GREEN + """
 8888888888888
 88888888      888
 88         88        88
@@ -91,7 +91,7 @@ print(Fore.GREEN + """
 88                 88888
 88888888888888
 88888888888888""")
-print (Fore.BLUE + """
+    print (Fore.BLUE + """
 Наш паблик вк vk.com/progteamlub
 ЦЕЛЬ 100 САБОВ! Мы вас любим♡♡♡""" + Fore.PINK + """
 
